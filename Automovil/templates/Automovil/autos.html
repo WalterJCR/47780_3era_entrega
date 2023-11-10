@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>AUTOS</title>
 </head>
 <body>
-    <ul>
-    {% for Auto in AUTOS %}
-    <li>{{Auto}}</li>
-    {% {% endfor %}%}
-    </ul>
+    <h1>Formulario de Autos</h1>
+    <form method="post" novalidate>
+        <table> 
+        {% csrf_token %}
+        {{ form.as_div}}
+        <input type="submit" value="Crear">
+        </table>
+        <input type="submit" value="Guardar">
+    </form>
+    <h1>Formulario de Cliente</h1>
+    <form method="post" novalidate>
+        <table> 
+        {% csrf_token %}
+        {{ form.as_div}}
+        <input type="submit" value="Crear">
+        </table>
+        <input type="submit" value="Guardar">
+    </form>
+    <h1>Formulario Conductor</h1>
+    <form method="post" novalidate>
+        <table> 
+        {% csrf_token %}
+        {{ form.as_div}}
+        <input type="submit" value="Crear">
+        </table>
+        <input type="submit" value="Guardar">
+    </form>
 </body>
 </html>
